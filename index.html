@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Milky way Weight Converter</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js" defer></script>
+</head>
+<body>
+    <div class="hero">
+        <div class="img">
+            <img src="./assets/images/Image_01.jpg" alt="Image showing two people looking up at the sky gazing at the magnificent view of our galaxy, the Milky Way.">
+        </div>
+        <div class="content">
+            <h2>Milky Way Weight Converter</h2>
+            <!-- Adding a span here to manipulate the text that should be inbetween using javascript. 
+                The manipulation will rotate the planet names after a few seconds. -->
+            <h1>How much would I weigh on <span id="words">Earth</span></h1>
+            <!-- I added a div wrapper here to keep the converter pieces grouped up, 
+                and it makes it easier to make space between them and the headers.  -->
+            <div class="calc-wrapper">    
+                <input type="number" placeholder="Your weight in kilos..." id="numinput" min="0" max="1000">
+                <select id="dropdown">
+                    <option value="earth">Earth</option>
+                    <option value="jupiter">Jupiter</option>
+                    <option value="mars">Mars</option>
+                    <option value="mercury">Mercury</option>
+                    <option value="moon">Moon</option>
+                    <option value="neptune">Neptune</option>
+                    <option value="pluto">Pluto</option>
+                    <option value="saturn">Saturn</option>
+                    <option value="sun">Sun</option>
+                    <option value="venus">Venus</option>
+                    <option value="uranus">Uranus</option>
+                </select>
+                <!-- Added two spans here for the purpose of having the converted weight injected into the text. 
+                    The second span is to inject the planet name chosen in the input field. -->
+                <div id="result"></div>
+                <button id="btn" type="button" onclick="convertUnit()">Convert</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

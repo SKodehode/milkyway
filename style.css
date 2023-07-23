@@ -1,0 +1,245 @@
+@font-face {
+    font-family: "astro-space";
+    src: url("./assets/fonts/AstroSpace-eZ2Bg.ttf");
+  }
+
+
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    text-align: start;
+}
+
+/* Styles to position the converter in the center of the viewer's screen. */
+body {
+    height: 100vh;
+    width: 100vw;
+    background-image: url(./assets/images/background_04.jpg);
+    font-family: "astro-space";
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Styles for the hero section which gives the intial shape to this converter. */
+.hero {
+    max-width: 800px;
+    width: 100%;
+    max-height: 600px;
+    height: 100%;
+    margin: 50px;
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-items: center;
+    align-items: center;
+    background-color: rgb(253,255,252,0.03);
+    color: #fdfffc;
+    border-radius: 12px;
+}
+
+/* Styles for the hero image */
+.img img {
+    width: 400px;
+    height: 600px;
+    border-radius: 12px 0px 0px 12px;
+    overflow: hidden;
+}
+
+.content {
+    padding: 25px;
+}
+
+.content h2 {
+    font-size: 0.80rem;
+    font-weight: 400;
+    margin: 0px 0px 25px 0px;
+}
+
+.content h1 {
+    font-size: 2.50rem;
+    font-weight: 700;
+    margin: 0px 0px 50px 0px;
+}
+
+/* Styles added in context to the word replacement function. */
+h1 #words {
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+  }
+  
+h1 #words {
+    opacity: 1;
+  }
+/* Styles for the content wrapper */
+
+.content .calc-wrapper {
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+}
+
+/* Styles for the input field. */
+
+.content .calc-wrapper input {
+    width: 100%;
+    padding: 15px;
+    text-align: center;
+    color: black;
+    font-size: 1rem;
+    font-family: inherit;
+    border-radius: 50px;
+    margin-bottom: 25px;
+    border: 1px solid grey;
+    text-decoration: none;
+    background-color: rgb(229,229,229);
+}
+
+/* Styles for the input field when its focused. */
+.content .calc-wrapper input:focus {
+    border: 1px solid black;
+}
+
+/* Hides the placeholder text when the input field is in focus. */
+input:focus::placeholder {
+    color: transparent;
+  }
+
+/* Removes arrows/spinners from the input field. */
+
+  /* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+/* Firefox */
+.content .calc-wrapper input[type=number] {
+  -moz-appearance: textfield;
+}
+
+
+/* Styles for the dropdown menu / select tag. */
+.content .calc-wrapper #dropdown {
+    width: 100%;
+    color: black;
+    font-size: 1rem;
+    font-family: inherit;
+    border-radius: 50px;
+    border: 1px solid grey;
+    padding: 15px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+/* Styles for the dropdown menu / select tag when it is focused. */
+.content .calc-wrapper #dropdown:focus {
+    border: 1px solid black;
+}
+
+/* Styles for the result paragraph where the user's converted weight will appear. */
+.content .calc-wrapper #result {
+    width: 100%;
+    height: 40px;
+    margin-bottom: 50px;
+    text-align: center;
+    font-size: 1rem;
+    text-shadow: 0px 0px 2px black;
+    
+}
+
+/* Styles for the convert button */
+.content .calc-wrapper button {
+    font-family: inherit;
+    font-size: 1rem;
+    width: 100%;
+    padding: 15px;
+    text-align: center;
+    border-radius: 50px;
+    cursor: pointer;
+    border: 1px solid grey;
+}
+
+/* @media used to change the margin size for screens that are 900px or less. */
+
+@media screen and (max-width: 900px) {
+    .hero {
+        margin: 5px
+    }
+}
+ 
+/* @media used to change how the site is display on screen sizes of 820px or less. */
+
+@media screen and (max-width: 820px) {
+    body {
+        height: 100vh;
+        width: 100vw;
+        background-image: url(./assets/images/background_03.jpg);
+        font-family: "astro-space";
+        align-items: start;
+    }
+
+    .hero {
+        background-color: rgb(253,255,252,0);
+        border-radius: 0px;
+    }
+
+    /* Styles for the hero image. */
+
+    .img {
+        overflow: hidden;
+        height: 0px;
+        width: 0100vw;
+    }
+    .img img {
+        grid-row-start: 0;
+        grid-row-end: 0;
+        width: 0%;
+        max-height: 100vh;
+        overflow: hidden;
+    }
+
+    /* Styles for the content grid. */
+    
+    .content {
+        grid-row-start: 2;
+        grid-row-end: 2;
+        padding: 20px 0px 0px 0px;
+        margin: 0px 50px 0px 50px;
+    }
+    
+    .content h2 {
+        font-size: 1rem;
+        margin: 0px 0px 15px 0px;
+    }
+    
+    .content h1 {
+        font-size: 2rem;
+        margin: 0px 0px 15x 0px;
+        width: 100%;
+    }
+    
+    /* Styles for the calculator wrapper */
+    
+    .content .calc-wrapper {
+        width: 100%;
+        height: 100%;
+        padding: 0px;
+    }
+    
+    /* Styles for the input field. */
+    
+    .content .calc-wrapper input {
+        width: 100%;
+    }
+    
+    /* Styles for the dropdown menu / select tag. */
+    .content .calc-wrapper #dropdown {
+        width: 100%;
+    }
+    
+    /* Styles for the convert button */
+    .content .calc-wrapper button {
+        width: 100%;
+    }
+}
